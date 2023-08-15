@@ -2,6 +2,7 @@ const text = document.getElementById("word");
 const responses = document.getElementById("responses");
 const input = document.getElementById("correct");
 const submitbtn = document.getElementById('submit')
+const displayScore = document.getElementById('score')
 
 const names = [
   "onomatopoeia",
@@ -16,6 +17,8 @@ const names = [
   "unequivocally",
 ];
 
+let score = 0;
+displayScore.textContent = `score: ${score}`
 text.textContent = randomfruits();
 
 function randomfruits() {
@@ -54,11 +57,16 @@ function submit() {
     names.includes(input.value) &&
     sortInputValue === sortTextValue
   ) {
+    score++
     responses.textContent = "Correct"
     submitbtn.disabled = true;
     input.disabled = true;
+    displayScore.textContent = `score: ${score}`
 
   } else {
+    score--
     responses.textContent = "Incorrect";
+    displayScore.textContent = `score: ${score}`
+   
   }
 }

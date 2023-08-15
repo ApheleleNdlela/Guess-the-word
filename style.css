@@ -11,20 +11,26 @@
     color: brown;
 }
 .box{
+    margin-left: 25%;
+    width: 50%;
+    padding-bottom: 40px;
+    padding-top: 40px;
     margin-top: 100px;
     align-items: center;
     background-color: rgb(129, 129, 197);
-    border-radius: 150px;
+    /* border-radius: 150px; */
 
 }
 #submit{
     margin-top: 50px;
+    margin-bottom: 100;
     background-color: brown;
     color: white;
     border-radius: 120px;
     text-decoration: solid;
 }
 #next{
+    /* margin-bottom: 40px; */
     background-color: brown;
     color: white;
     border-radius: 120px;
