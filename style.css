@@ -1,7 +1,32 @@
 .body{
     text-align: center;
     justify-content: center;
+    border: 0cm;
+    border-color: blue;
+    border-radius: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 #h1{
     color: brown;
+}
+.box{
+    margin-top: 100px;
+    align-items: center;
+    background-color: rgb(129, 129, 197);
+    border-radius: 150px;
+
+}
+#submit{
+    margin-top: 50px;
+    background-color: brown;
+    color: white;
+    border-radius: 120px;
+    text-decoration: solid;
+}
+#next{
+    background-color: brown;
+    color: white;
+    border-radius: 120px;
+    text-decoration: solid;
 }

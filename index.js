@@ -1,6 +1,7 @@
 const text = document.getElementById("word");
 const responses = document.getElementById("responses");
 const input = document.getElementById("correct");
+const submitbtn = document.getElementById('submit')
 
 const names = [
   "onomatopoeia",
@@ -12,7 +13,7 @@ const names = [
   "volcanic",
   "pineapple",
   "inhumane",
-  "",
+  "unequivocally",
 ];
 
 text.textContent = randomfruits();
@@ -27,11 +28,22 @@ function randomfruits() {
 }
 
 function next() {
+  submitbtn.disabled = false;
+  input.disabled = false;
+
+
   text.textContent = randomfruits();
+  
+  document.getElementById('correct').value =''
   responses.textContent = "";
+  
 }
 
 function submit() {
+
+
+
+
   const randomfruitsLength = text.textContent.length;
 
   const sortInputValue = input.value.split("").sort().join("");
@@ -42,13 +54,11 @@ function submit() {
     names.includes(input.value) &&
     sortInputValue === sortTextValue
   ) {
-    responses.textContent = "Correct";
+    responses.textContent = "Correct"
+    submitbtn.disabled = true;
+    input.disabled = true;
+
   } else {
     responses.textContent = "Incorrect";
   }
 }
-
-// const fruit = allFruits[randomIndex].split('').sort(()=> Math.random() - 0.5).join('')
-// const randomWords = allFruits.sort(()=> Math.random() - 0.5)
-// const letters = randomWords[0].split('').sort(()=> Math.random() - 0.5).join('')
-// const words = "shop".split('')
